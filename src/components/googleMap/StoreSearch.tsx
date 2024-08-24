@@ -11,8 +11,8 @@ const StoreSearch = () => {
   };
 
   return (
-    <div className='xl:grid md:grid'>
-      <div className=''>
+    <div className='container xl:grid md:grid'>
+      <div className='md:py-10'>
         <SearchBox />
       </div>
 
