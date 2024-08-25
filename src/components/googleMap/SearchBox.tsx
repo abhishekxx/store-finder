@@ -1,7 +1,7 @@
 
 const SearchBox = () => {
   return (
-    <div className=" flex flex-col gap-3 p-6">
+    <div className="flex flex-col gap-3 p-6 ">
         <span className="text-4xl font-semibold">Store Locator</span>
         <form className="">   
             <div className="relative">

@@ -3,6 +3,8 @@ import SearchBox from './SearchBox';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
+const GOOGLE_MAP = import.meta.env.GOOGLE_MAPP_APP_KEY;
+
 interface Place {
   geometry: {
     location: {
@@ -34,7 +36,8 @@ const StoreSearch = () => {
 
       try {
         const response = await axios.get<{ results: Place[] }>(
-          `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location}&radius=${radius}&type=${type}&key=AIzaSyCydWgmsMsjtLLFuDqvPyWAOjUkM0eqKQw`
+          `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${location}&radius=${radius}&type=${type}&key=${GOOGLE_MAP}`
+          
         );
 
         setPlaces(response.data.results);
